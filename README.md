@@ -41,21 +41,21 @@ Bank project/
 
 ### 📊 Excel Dashboard
 <p align="center">
-  <img src="Dashboards/excel_dashboard.png" width="900"/>
+  <img src="Bank Project/Dashboards/excel_dashboard.png" width="900"/>
 </p>
 
 ---
 
 ### 📊 Power BI Dashboard
 <p align="center">
-  <img src="Dashboards/powerbi_dashboard.png" width="900"/>
+  <img src="Bank Project/Dashboards/powerbi_dashboard.png" width="900"/>
 </p>
 
 ---
 
 ### 📊 Tableau Dashboard
 <p align="center">
-  <img src="Dashboards/Tableau_dashboard.png" width="900"/>
+  <img src="Bank Project/Dashboards/Tableau_dashboard.png" width="900"/>
 </p>
 ---
 
