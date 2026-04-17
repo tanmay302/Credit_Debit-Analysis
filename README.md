@@ -61,9 +61,11 @@ Bank project/
 
 ## 🌐 Live Dashboard (Tableau)
 
-👉 **View Interactive Dashboard:**  
-🔗 [Click here to explore]((https://public.tableau.com/app/profile/tanmay.khedekar/viz/CreditandDebitDashboard/Dashboard1))
-
+<p align="center">
+  <a href="https://public.tableau.com/app/profile/tanmay.khedekar/viz/CreditandDebitDashboard/Dashboard1" target="_blank">
+    <img src="https://img.shields.io/badge/View%20Dashboard-Tableau-blue?style=for-the-badge&logo=tableau"/>
+  </a>
+</p>
 ---
 
 ## 📊 Key KPIs (From Dashboard)
