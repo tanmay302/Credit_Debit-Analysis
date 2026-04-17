@@ -1,0 +1,2908 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <BasicButtonObject />
+    <CollapsiblePane />
+    <DashboardExportButton />
+    <DashboardMttwImageObject />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+    <ZoneVisibilityControl />
+  </document-format-change-manifest>
+  <repository-location derived-from='https://haproxy-traffic-splitter/workbooks/CreditandDebitDashboard?rev=1.4' id='CreditandDebitDashboard' path='/workbooks' revision='2.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Dataset (Debit and Credit banking_data)' inline='true' name='federated.1sgynvl0zr6vr3178yoam0nddpp0' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Debit and Credit banking_data' name='excel-direct.0g30nfh0dogo2e18hjv7p097mhgh'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' interpretationMode='0' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0g30nfh0dogo2e18hjv7p097mhgh' name='Dataset' table='[Dataset$]' type='table'>
+          <columns gridOrigin='A1:Q10001:no:A1:Q10001:0' header='yes' outcome='2'>
+            <column datatype='string' name='Customer Name' ordinal='0' />
+            <column datatype='integer' name='Account Number' ordinal='1' />
+            <column datatype='date' name='Transaction Date' ordinal='2' />
+            <column datatype='string' name='Transaction Type' ordinal='3' />
+            <column datatype='real' name='Amount' ordinal='4' />
+            <column datatype='real' name='Balance' ordinal='5' />
+            <column datatype='string' name='Description' ordinal='6' />
+            <column datatype='string' name='Branch' ordinal='7' />
+            <column datatype='string' name='Transaction Method' ordinal='8' />
+            <column datatype='string' name='Bank Name' ordinal='9' />
+            <column datatype='real' name='F11' ordinal='10' />
+            <column datatype='real' name='F12' ordinal='11' />
+            <column datatype='real' name='F13' ordinal='12' />
+            <column datatype='real' name='F14' ordinal='13' />
+            <column datatype='real' name='F15' ordinal='14' />
+            <column datatype='real' name='F16' ordinal='15' />
+            <column datatype='integer' name='F17' ordinal='16' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Dataset]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:Q10001:no:A1:Q10001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Customer Name]</local-name>
+            <parent-name>[Dataset]</parent-name>
+            <remote-alias>Customer Name</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Account Number</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Account Number]</local-name>
+            <parent-name>[Dataset]</parent-name>
+            <remote-alias>Account Number</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Transaction Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Transaction Date]</local-name>
+            <parent-name>[Dataset]</parent-name>
+            <remote-alias>Transaction Date</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Transaction Type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Transaction Type]</local-name>
+            <parent-name>[Dataset]</parent-name>
+            <remote-alias>Transaction Type</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Amount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Amount]</local-name>
+            <parent-name>[Dataset]</parent-name>
+            <remote-alias>Amount</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Balance</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Balance]</local-name>
+            <parent-name>[Dataset]</parent-name>
+            <remote-alias>Balance</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Description</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Description]</local-name>
+            <parent-name>[Dataset]</parent-name>
+            <remote-alias>Description</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Branch</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Branch]</local-name>
+            <parent-name>[Dataset]</parent-name>
+            <remote-alias>Branch</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Transaction Method</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Transaction Method]</local-name>
+            <parent-name>[Dataset]</parent-name>
+            <remote-alias>Transaction Method</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bank Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Bank Name]</local-name>
+            <parent-name>[Dataset]</parent-name>
+            <remote-alias>Bank Name</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F11</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F11]</local-name>
+            <parent-name>[Dataset]</parent-name>
+            <remote-alias>F11</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F12</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F12]</local-name>
+            <parent-name>[Dataset]</parent-name>
+            <remote-alias>F12</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F13</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F13]</local-name>
+            <parent-name>[Dataset]</parent-name>
+            <remote-alias>F13</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F14</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F14]</local-name>
+            <parent-name>[Dataset]</parent-name>
+            <remote-alias>F14</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F15</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F15]</local-name>
+            <parent-name>[Dataset]</parent-name>
+            <remote-alias>F15</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F16</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F16]</local-name>
+            <parent-name>[Dataset]</parent-name>
+            <remote-alias>F16</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F17</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F17]</local-name>
+            <parent-name>[Dataset]</parent-name>
+            <remote-alias>F17</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Account Number]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[Branch]' role='dimension' type='nominal' />
+      <column caption='Debited Amount' datatype='real' name='[Calculation_638103826374356992]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF [Transaction Type]=&quot;Debit&quot; THEN [Amount] END)' />
+      </column>
+      <column caption='CreditDebitRatio' datatype='real' name='[Calculation_638103826375274497]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calculation_650488725331918849]/[Calculation_638103826374356992]' />
+      </column>
+      <column caption='Net Transaction Amount' datatype='real' name='[Calculation_638103826376216578]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calculation_650488725331918849]-[Calculation_638103826374356992]' />
+      </column>
+      <column caption='Credited Amount' datatype='real' name='[Calculation_650488725331918849]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF [Transaction Type]=&quot;Credit&quot; Then [Amount] END)' />
+      </column>
+      <column caption='Total Transactions Amount' datatype='real' name='[Calculation_710442895527391236]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calculation_638103826374356992] + [Calculation_650488725331918849]' />
+      </column>
+      <column caption='Transaction per day' datatype='integer' name='[Calculation_710442895532711943]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([Transaction Date])' />
+      </column>
+      <column caption='Transaction per week' datatype='datetime' name='[Calculation_710442895533223944]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATETRUNC(&apos;week&apos;,[Transaction Date])' />
+      </column>
+      <column caption='No. of Transaction' datatype='integer' name='[Calculation_710442895536775179]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD([Account Number])' />
+      </column>
+      <column caption='Account Activity Ratio' datatype='real' name='[Calculation_710442895537041420]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD([Transaction Date])/SUM([Balance])' />
+      </column>
+      <column caption='Transaction per Month' datatype='datetime' name='[Calculation_710442895539007501]' role='dimension' type='quantitative'>
+        <calculation class='tableau' formula='DATETRUNC(&apos;month&apos;,[Transaction Date])' />
+      </column>
+      <column datatype='string' name='[Customer Name]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Description]' role='dimension' type='nominal' />
+      <column datatype='real' hidden='true' name='[F11]' role='measure' type='quantitative' />
+      <column datatype='real' hidden='true' name='[F12]' role='measure' type='quantitative' />
+      <column datatype='real' hidden='true' name='[F13]' role='measure' type='quantitative' />
+      <column datatype='real' hidden='true' name='[F14]' role='measure' type='quantitative' />
+      <column datatype='real' hidden='true' name='[F15]' role='measure' type='quantitative' />
+      <column datatype='real' hidden='true' name='[F16]' role='measure' type='quantitative' />
+      <column datatype='integer' hidden='true' name='[F17]' role='measure' type='quantitative' />
+      <column datatype='date' name='[Transaction Date]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[Transaction Type]' role='dimension' type='nominal' />
+      <column caption='Dataset' datatype='table' name='[__tableau_internal_object_id__].[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]' role='measure' type='quantitative' />
+      <column-instance column='[Branch]' derivation='None' name='[none:Branch:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Description]' derivation='None' name='[none:Description:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Transaction Type]' derivation='None' name='[none:Transaction Type:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Transaction Date]' derivation='Month-Trunc' name='[tmn:Transaction Date:ok]' pivot='key' type='ordinal' />
+      <group caption='Action (Customer Name,Transaction Type)' hidden='true' name='[Action (Customer Name,Transaction Type)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Customer Name]' />
+          <groupfilter function='level-members' level='[Transaction Type]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Description,MONTH(Transaction Date))' hidden='true' name='[Action (Description,MONTH(Transaction Date))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Description]' />
+          <groupfilter function='level-members' level='[tmn:Transaction Date:ok]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (MONTH(Transaction Date),Transaction Type)' hidden='true' name='[Action (MONTH(Transaction Date),Transaction Type)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[tmn:Transaction Date:ok]' />
+          <groupfilter function='level-members' level='[Transaction Type]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Transaction Type)' hidden='true' name='[Action (Transaction Type)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Transaction Type]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/TableauTemp/#TableauTemp_1pkx64f0uklsam15u9fi104yqjuv.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='03/10/2025 07:07:53 AM' username=''>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Customer Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Customer Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Customer Name</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Dataset</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>46788</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Account Number</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Account Number]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Account Number</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Dataset</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>100000</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Transaction Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Transaction Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Transaction Date</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Dataset</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>805</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Transaction Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Transaction Type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Transaction Type</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Dataset</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Amount</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Amount]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Amount</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Dataset</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>94779</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Balance</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Balance]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Balance</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Dataset</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>100000</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Description</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Description]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Description</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Dataset</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Branch</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Branch]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Branch</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Dataset</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Transaction Method</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Transaction Method]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Transaction Method</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Dataset</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Bank Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Bank Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Bank Name</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Dataset</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Branch:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;North Branch&quot;</bucket>
+            </map>
+            <map to='#aaffff'>
+              <bucket>&quot;City Center Branch&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;East Branch&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Suburban Branch&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Downtown Branch&quot;</bucket>
+            </map>
+            <map to='#ff55ff'>
+              <bucket>&quot;Main Branch&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Transaction Type:nk]' type='palette'>
+            <map to='#03c4a1'>
+              <bucket>&quot;Credit&quot;</bucket>
+            </map>
+            <map to='#c52a87'>
+              <bucket>&quot;Debit&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Description:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Bonus Payment&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Grocery Shopping&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Freelance Payment&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;Salary Deposit&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Refund for Overcharge&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Utility Bill Payment&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Dinner at Restaurant&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Online Shopping&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Client Payment&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Refund from Retailer&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Dataset' id='Dataset_A4EEB6C89F44459193EDD8D9F7A8F4FD'>
+            <properties context=''>
+              <relation connection='excel-direct.0g30nfh0dogo2e18hjv7p097mhgh' name='Dataset' table='[Dataset$]' type='table'>
+                <columns gridOrigin='A1:Q10001:no:A1:Q10001:0' header='yes' outcome='2'>
+                  <column datatype='string' name='Customer Name' ordinal='0' />
+                  <column datatype='integer' name='Account Number' ordinal='1' />
+                  <column datatype='date' name='Transaction Date' ordinal='2' />
+                  <column datatype='string' name='Transaction Type' ordinal='3' />
+                  <column datatype='real' name='Amount' ordinal='4' />
+                  <column datatype='real' name='Balance' ordinal='5' />
+                  <column datatype='string' name='Description' ordinal='6' />
+                  <column datatype='string' name='Branch' ordinal='7' />
+                  <column datatype='string' name='Transaction Method' ordinal='8' />
+                  <column datatype='string' name='Bank Name' ordinal='9' />
+                  <column datatype='real' name='F11' ordinal='10' />
+                  <column datatype='real' name='F12' ordinal='11' />
+                  <column datatype='real' name='F13' ordinal='12' />
+                  <column datatype='real' name='F14' ordinal='13' />
+                  <column datatype='real' name='F15' ordinal='14' />
+                  <column datatype='real' name='F16' ordinal='15' />
+                  <column datatype='integer' name='F17' ordinal='16' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <shared-views>
+    <shared-view name='federated.1sgynvl0zr6vr3178yoam0nddpp0'>
+      <datasources>
+        <datasource caption='Dataset (Debit and Credit banking_data)' name='federated.1sgynvl0zr6vr3178yoam0nddpp0' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1sgynvl0zr6vr3178yoam0nddpp0'>
+        <column datatype='string' name='[Bank Name]' role='dimension' type='nominal' />
+        <column-instance column='[Bank Name]' derivation='None' name='[none:Bank Name:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Bank Name:nk]'>
+        <groupfilter function='level-members' level='[none:Bank Name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <actions>
+    <action caption='Filter 2 (generated)' name='[Action2_D278ED8C273043728C38FD6B3D3983DC]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Credited Amount' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 4 (generated)' name='[Action4_45943DB0FA5C4745A1B6F600063065A3]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Net Transaction Amount' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 1 (generated)' name='[Action4_51EB7DD868B744139623E5DD56FB1705]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Debited Amount' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 3 (generated)' name='[Action4_8E3AC28F37524F189770510ACBA05BC0]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Credit to Debit Ratio' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 5 (generated)' name='[Action5_E00D303F9FAF46099C973313F4D2A763]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Top 5 Customers by Transaction type' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 6 (generated)' name='[Action6_FFB4DF0FF32D4A70826337582B56EA54]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Transaction Description by Amount' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 7 (generated)' name='[Action7_1F85D1C95E13413DB7618A392F3EFBFC]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Debit and credit Transactions' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 8 (generated)' name='[Action8_12D2CFA586184B90930584A5D71E1D04]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Montly Credit and Debit Transactions' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Credit to Debit Ratio'>
+      <repository-location derived-from='https://haproxy-traffic-splitter/workbooks/CreditandDebitDashboard/CredittoDebitRatio?rev=' id='113222358' path='/workbooks/CreditandDebitDashboard' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Dataset (Debit and Credit banking_data)' name='federated.1sgynvl0zr6vr3178yoam0nddpp0' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1sgynvl0zr6vr3178yoam0nddpp0'>
+            <column datatype='real' name='[Amount]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Bank Name]' role='dimension' type='nominal' />
+            <column caption='Debited Amount' datatype='real' name='[Calculation_638103826374356992]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [Transaction Type]=&quot;Debit&quot; THEN [Amount] END)' />
+            </column>
+            <column caption='CreditDebitRatio' datatype='real' name='[Calculation_638103826375274497]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Calculation_650488725331918849]/[Calculation_638103826374356992]' />
+            </column>
+            <column caption='Credited Amount' datatype='real' name='[Calculation_650488725331918849]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [Transaction Type]=&quot;Credit&quot; Then [Amount] END)' />
+            </column>
+            <column datatype='string' name='[Customer Name]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Transaction Date]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Transaction Type]' role='dimension' type='nominal' />
+            <column-instance column='[Transaction Date]' derivation='MY' name='[my:Transaction Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Bank Name]' derivation='None' name='[none:Bank Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_638103826375274497]' derivation='User' name='[usr:Calculation_638103826375274497:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Customer Name,Transaction Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action5_E00D303F9FAF46099C973313F4D2A763]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Customer Name]' />
+              <groupfilter function='level-members' level='[Transaction Type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Transaction Type)]'>
+            <groupfilter function='level-members' level='[Transaction Type]' user:ui-action-filter='[Action7_1F85D1C95E13413DB7618A392F3EFBFC]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[my:Transaction Date:ok]' filter-group='3'>
+            <groupfilter function='level-members' level='[my:Transaction Date:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Bank Name:nk]</column>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[my:Transaction Date:ok]</column>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Customer Name,Transaction Type)]</column>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Transaction Type)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_638103826375274497:qk]' value='*0.000000' />
+            <format attr='width' value='313' />
+            <format attr='height' value='69' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='14' />
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#f5f5f5' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_638103826375274497:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='18'>&lt;</run>
+                <run fontsize='18'>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_638103826375274497:qk]</run>
+                <run fontsize='18'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{0AC396CA-4C3F-4528-9AA1-4C93FD70F904}' />
+    </worksheet>
+    <worksheet name='Credited Amount'>
+      <repository-location derived-from='https://haproxy-traffic-splitter/workbooks/CreditandDebitDashboard/CreditedAmount?rev=' id='113222356' path='/workbooks/CreditandDebitDashboard' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Dataset (Debit and Credit banking_data)' name='federated.1sgynvl0zr6vr3178yoam0nddpp0' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1sgynvl0zr6vr3178yoam0nddpp0'>
+            <column datatype='real' name='[Amount]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Bank Name]' role='dimension' type='nominal' />
+            <column caption='Credited Amount' datatype='real' name='[Calculation_650488725331918849]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [Transaction Type]=&quot;Credit&quot; Then [Amount] END)' />
+            </column>
+            <column datatype='string' name='[Customer Name]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Transaction Date]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Transaction Type]' role='dimension' type='nominal' />
+            <column-instance column='[Transaction Date]' derivation='MY' name='[my:Transaction Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Bank Name]' derivation='None' name='[none:Bank Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_650488725331918849]' derivation='User' name='[usr:Calculation_650488725331918849:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Customer Name,Transaction Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action5_E00D303F9FAF46099C973313F4D2A763]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Customer Name]' />
+              <groupfilter function='level-members' level='[Transaction Type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Transaction Type)]'>
+            <groupfilter function='level-members' level='[Transaction Type]' user:ui-action-filter='[Action7_1F85D1C95E13413DB7618A392F3EFBFC]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[my:Transaction Date:ok]' filter-group='3'>
+            <groupfilter function='level-members' level='[my:Transaction Date:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Bank Name:nk]</column>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[my:Transaction Date:ok]</column>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Customer Name,Transaction Type)]</column>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Transaction Type)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='242' />
+            <format attr='height' value='66' />
+            <format attr='font-size' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_650488725331918849:qk]' value='16' />
+            <format attr='font-weight' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_650488725331918849:qk]' value='bold' />
+            <format attr='vertical-align' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_650488725331918849:qk]' value='center' />
+            <format attr='text-format' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_650488725331918849:qk]' value='c&quot;₹ &quot;#,##0,,.00M;&quot;₹ &quot;-#,##0,,.00M' />
+            <format attr='text-align' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_650488725331918849:qk]' value='center' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' scope='rows' value='#f5f5f5' />
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='center' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#f5f5f5' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_650488725331918849:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='18'><![CDATA[<[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_650488725331918849:qk]>]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='wrap' value='off' />
+                <format attr='vertical-align' value='auto' />
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{9EA39267-9EE5-4A8F-A7D3-77ECB7FC9DDE}' />
+    </worksheet>
+    <worksheet name='Debit and credit Transactions'>
+      <repository-location derived-from='https://haproxy-traffic-splitter/workbooks/CreditandDebitDashboard/DebitandcreditTransactions?rev=' id='113377912' path='/workbooks/CreditandDebitDashboard' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Dataset (Debit and Credit banking_data)' name='federated.1sgynvl0zr6vr3178yoam0nddpp0' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1sgynvl0zr6vr3178yoam0nddpp0'>
+            <column datatype='integer' name='[Account Number]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Bank Name]' role='dimension' type='nominal' />
+            <column caption='AVG(0)' datatype='real' name='[Calculation_1198239031320481793]' role='measure' type='quantitative' user:unnamed='Total transaction by Credited Amount'>
+              <calculation class='tableau' formula='AVG(0)' />
+            </column>
+            <column caption='No. of Transaction' datatype='integer' name='[Calculation_710442895536775179]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([Account Number])' />
+            </column>
+            <column datatype='string' name='[Customer Name]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Transaction Date]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Transaction Type]' role='dimension' type='nominal' />
+            <column-instance column='[Transaction Date]' derivation='MY' name='[my:Transaction Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Bank Name]' derivation='None' name='[none:Bank Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Transaction Type]' derivation='None' name='[none:Transaction Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_710442895536775179]' derivation='User' name='[pcto:usr:Calculation_710442895536775179:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Calculation_1198239031320481793]' derivation='User' name='[usr:Calculation_1198239031320481793:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_710442895536775179]' derivation='User' name='[usr:Calculation_710442895536775179:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Customer Name,Transaction Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action5_E00D303F9FAF46099C973313F4D2A763]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Customer Name]' />
+              <groupfilter function='level-members' level='[Transaction Type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[my:Transaction Date:ok]' filter-group='3'>
+            <groupfilter function='level-members' level='[my:Transaction Date:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Bank Name:nk]</column>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[my:Transaction Date:ok]</column>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Customer Name,Transaction Type)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='1' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_1198239031320481793:qk]' field-type='quantitative' fold='true' scope='cols' synchronized='true' type='space' />
+            <format attr='display' class='1' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_1198239031320481793:qk]' scope='cols' value='false' />
+            <format attr='display' class='0' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_1198239031320481793:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_710442895536775179:qk]' value='c#,##0,K' />
+            <format attr='text-format' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[pcto:usr:Calculation_710442895536775179:qk]' value='p0.00%' />
+            <format attr='color' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[pcto:usr:Calculation_710442895536775179:qk]' value='#000000' />
+            <format attr='color' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_710442895536775179:qk]' value='#000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#f5f5f5' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#edc948' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_1198239031320481793:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Transaction Type:nk]' />
+              <text column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Transaction Type:nk]' />
+              <text column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[pcto:usr:Calculation_710442895536775179:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='2' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#edc948' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_1198239031320481793:qk]' x-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_710442895536775179:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='1.2853591442108154' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#edc948' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>([federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_1198239031320481793:qk] + [federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_1198239031320481793:qk])</cols>
+      </table>
+      <simple-id uuid='{68424191-2D42-4F4A-BD19-7B45F3A8ED9F}' />
+    </worksheet>
+    <worksheet name='Debited Amount'>
+      <repository-location derived-from='https://haproxy-traffic-splitter/workbooks/CreditandDebitDashboard/DebitedAmount?rev=' id='113222357' path='/workbooks/CreditandDebitDashboard' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Dataset (Debit and Credit banking_data)' name='federated.1sgynvl0zr6vr3178yoam0nddpp0' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1sgynvl0zr6vr3178yoam0nddpp0'>
+            <column datatype='real' name='[Amount]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Bank Name]' role='dimension' type='nominal' />
+            <column caption='Debited Amount' datatype='real' name='[Calculation_638103826374356992]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [Transaction Type]=&quot;Debit&quot; THEN [Amount] END)' />
+            </column>
+            <column datatype='string' name='[Customer Name]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Transaction Date]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Transaction Type]' role='dimension' type='nominal' />
+            <column-instance column='[Transaction Date]' derivation='MY' name='[my:Transaction Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Bank Name]' derivation='None' name='[none:Bank Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_638103826374356992]' derivation='User' name='[usr:Calculation_638103826374356992:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Customer Name,Transaction Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action5_E00D303F9FAF46099C973313F4D2A763]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Customer Name]' />
+              <groupfilter function='level-members' level='[Transaction Type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Transaction Type)]'>
+            <groupfilter function='level-members' level='[Transaction Type]' user:ui-action-filter='[Action7_1F85D1C95E13413DB7618A392F3EFBFC]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[my:Transaction Date:ok]' filter-group='3'>
+            <groupfilter function='level-members' level='[my:Transaction Date:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Bank Name:nk]</column>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[my:Transaction Date:ok]</column>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Customer Name,Transaction Type)]</column>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Transaction Type)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='267' />
+            <format attr='height' value='71' />
+            <format attr='text-format' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_638103826374356992:qk]' value='c&quot;₹ &quot;#,##0,,.00M;&quot;₹ &quot;-#,##0,,.00M' />
+            <format attr='font-size' value='18' />
+            <format attr='color' value='#f5f5f5' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='text-align' data-class='subtotal' value='center' />
+            <format attr='vertical-align' data-class='subtotal' value='center' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='center' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#c0c0c0' />
+            <format attr='font-size' value='15' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_638103826374356992:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>&lt;</run>
+                <run>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_638103826374356992:qk]</run>
+                <run>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{D13F0318-554F-44F7-A6EC-9D71820F7FA3}' />
+    </worksheet>
+    <worksheet name='Montly Credit and Debit Transactions'>
+      <repository-location derived-from='https://haproxy-traffic-splitter/workbooks/CreditandDebitDashboard/MontlyCreditandDebitTransactions?rev=' id='113374155' path='/workbooks/CreditandDebitDashboard' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Dataset (Debit and Credit banking_data)' name='federated.1sgynvl0zr6vr3178yoam0nddpp0' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1sgynvl0zr6vr3178yoam0nddpp0'>
+            <column datatype='real' name='[Amount]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Bank Name]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Customer Name]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Transaction Date]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Transaction Type]' role='dimension' type='nominal' />
+            <column-instance column='[Bank Name]' derivation='None' name='[none:Bank Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Transaction Type]' derivation='None' name='[none:Transaction Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Amount]' derivation='Sum' name='[sum:Amount:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Transaction Date]' derivation='Month-Trunc' name='[tmn:Transaction Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Customer Name,Transaction Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action5_E00D303F9FAF46099C973313F4D2A763]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Customer Name]' />
+              <groupfilter function='level-members' level='[Transaction Type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Transaction Type)]'>
+            <groupfilter function='level-members' level='[Transaction Type]' user:ui-action-filter='[Action7_1F85D1C95E13413DB7618A392F3EFBFC]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Bank Name:nk]</column>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Customer Name,Transaction Type)]</column>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Transaction Type)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='auto-subtitle' class='0' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[tmn:Transaction Date:qk]' scope='cols' value='false' />
+            <format attr='display' class='0' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[sum:Amount:qk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[sum:Amount:qk]' value='c&quot;₹ &quot;#,##0,,.00M;&quot;₹ &quot;-#,##0,,.00M' />
+            <format attr='font-weight' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[sum:Amount:qk]' value='bold' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[tmn:Transaction Date:qk]' value='#f5f5f5' />
+            <format attr='font-weight' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[tmn:Transaction Date:qk]' value='bold' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Transaction Type:nk]' />
+              <text column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[sum:Amount:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[sum:Amount:qk]</rows>
+        <cols>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[tmn:Transaction Date:qk]</cols>
+      </table>
+      <simple-id uuid='{D128A6EE-EB41-4E87-8E70-34843B9EA502}' />
+    </worksheet>
+    <worksheet name='Net Transaction Amount'>
+      <repository-location derived-from='https://haproxy-traffic-splitter/workbooks/CreditandDebitDashboard/NetTransactionAmount?rev=' id='113222359' path='/workbooks/CreditandDebitDashboard' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Dataset (Debit and Credit banking_data)' name='federated.1sgynvl0zr6vr3178yoam0nddpp0' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1sgynvl0zr6vr3178yoam0nddpp0'>
+            <column datatype='real' name='[Amount]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Bank Name]' role='dimension' type='nominal' />
+            <column caption='Debited Amount' datatype='real' name='[Calculation_638103826374356992]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [Transaction Type]=&quot;Debit&quot; THEN [Amount] END)' />
+            </column>
+            <column caption='Net Transaction Amount' datatype='real' name='[Calculation_638103826376216578]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Calculation_650488725331918849]-[Calculation_638103826374356992]' />
+            </column>
+            <column caption='Credited Amount' datatype='real' name='[Calculation_650488725331918849]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [Transaction Type]=&quot;Credit&quot; Then [Amount] END)' />
+            </column>
+            <column datatype='string' name='[Customer Name]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Transaction Date]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Transaction Type]' role='dimension' type='nominal' />
+            <column-instance column='[Transaction Date]' derivation='MY' name='[my:Transaction Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Bank Name]' derivation='None' name='[none:Bank Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_638103826376216578]' derivation='User' name='[usr:Calculation_638103826376216578:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Customer Name,Transaction Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action5_E00D303F9FAF46099C973313F4D2A763]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Customer Name]' />
+              <groupfilter function='level-members' level='[Transaction Type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Transaction Type)]'>
+            <groupfilter function='level-members' level='[Transaction Type]' user:ui-action-filter='[Action7_1F85D1C95E13413DB7618A392F3EFBFC]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[my:Transaction Date:ok]' filter-group='3'>
+            <groupfilter function='level-members' level='[my:Transaction Date:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Bank Name:nk]</column>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[my:Transaction Date:ok]</column>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Customer Name,Transaction Type)]</column>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Transaction Type)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='255' />
+            <format attr='height' value='69' />
+            <format attr='text-format' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_638103826376216578:qk]' value='c&quot;₹ &quot;#,##0,.00K;&quot;₹ &quot;-#,##0,.00K' />
+            <format attr='font-size' value='8' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='center' />
+            <format attr='font-size' value='8' />
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='14' />
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#f5f5f5' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Bank Name:nk]' value='Bank Name'>
+              <formatted-text>
+                <run fontalignment='1' fontsize='9'>Bank Name</run>
+              </formatted-text>
+            </format>
+            <format attr='title' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[my:Transaction Date:ok]' value=' Months in 2024'>
+              <formatted-text>
+                <run fontalignment='1' fontsize='9'> Months in 2024</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+          <style-rule element='quick-filter-title'>
+            <format attr='font-size' value='8' />
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_638103826376216578:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='18'>&lt;</run>
+                <run fontsize='18'>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_638103826376216578:qk]</run>
+                <run fontsize='18'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{BED7CEE2-67EA-4CE0-A0C9-61C498BC590C}' />
+    </worksheet>
+    <worksheet name='Top 5 Customers by Transaction type'>
+      <repository-location derived-from='https://haproxy-traffic-splitter/workbooks/CreditandDebitDashboard/Top5CustomersbyTransactiontype?rev=' id='113374154' path='/workbooks/CreditandDebitDashboard' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Dataset (Debit and Credit banking_data)' name='federated.1sgynvl0zr6vr3178yoam0nddpp0' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1sgynvl0zr6vr3178yoam0nddpp0'>
+            <column datatype='real' name='[Amount]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Bank Name]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Customer Name]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Transaction Date]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Transaction Type]' role='dimension' type='nominal' />
+            <column-instance column='[Transaction Date]' derivation='MY' name='[my:Transaction Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Bank Name]' derivation='None' name='[none:Bank Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Customer Name]' derivation='None' name='[none:Customer Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Transaction Type]' derivation='None' name='[none:Transaction Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Amount]' derivation='Sum' name='[sum:Amount:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Transaction Type)]'>
+            <groupfilter function='level-members' level='[Transaction Type]' user:ui-action-filter='[Action7_1F85D1C95E13413DB7618A392F3EFBFC]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[my:Transaction Date:ok]' filter-group='3'>
+            <groupfilter function='level-members' level='[my:Transaction Date:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Customer Name:nk]'>
+            <groupfilter count='5' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Amount])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Customer Name:nk]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Transaction Type:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[sum:Amount:qk]' shelf='columns'>
+              <sort-filter-info>
+                <sort-filter level-name='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Customer Name:nk]' member-value='&quot;David Smith&quot;' />
+              </sort-filter-info>
+            </shelf-sort-v2>
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Customer Name:nk]</column>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Bank Name:nk]</column>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[my:Transaction Date:ok]</column>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Transaction Type)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Transaction Type:nk]' value='135' />
+            <format attr='height' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Customer Name:nk]' value='27' />
+            <format attr='text-format' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[sum:Amount:qk]' value='c&quot;₹ &quot;#,##0,.00K;&quot;₹ &quot;-#,##0,.00K' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Customer Name:nk]' value='208' />
+            <format attr='background-color' scope='cols' value='#e6e6e6' />
+            <format attr='background-color' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Customer Name:nk]' value='#f5f5f5' />
+            <format attr='background-color' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Transaction Type:nk]' value='#777777' />
+          </style-rule>
+          <style-rule element='field-labels'>
+            <format attr='background-color' value='#777777' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Customer Name:nk]' value='center' />
+            <format attr='color' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Transaction Type:nk]' value='#000000' />
+            <format attr='font-weight' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Transaction Type:nk]' value='bold' />
+            <format attr='font-weight' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Customer Name:nk]' value='normal' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[sum:Amount:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='color' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[sum:Amount:qk]' num-steps='2' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-diverging'>
+                <color>#03c4a1</color>
+                <color>#23c7a9</color>
+                <color>#45cbb2</color>
+                <color>#68cebc</color>
+                <color>#8dd2c5</color>
+                <color>#b2d5cf</color>
+                <color>#d9d9d9</color>
+                <color>#d5b9ca</color>
+                <color>#d29bbc</color>
+                <color>#cf7dae</color>
+                <color>#cb60a0</color>
+                <color>#c84493</color>
+                <color>#c52a87</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[sum:Amount:qk]' />
+              <text column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[sum:Amount:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='has-stroke' value='false' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Customer Name:nk]</rows>
+        <cols>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Transaction Type:nk]</cols>
+      </table>
+      <simple-id uuid='{495D86B0-D5E5-4871-8680-5F8CBC43AE15}' />
+    </worksheet>
+    <worksheet name='Total Transaction Amount By Branch'>
+      <repository-location derived-from='https://haproxy-traffic-splitter/workbooks/CreditandDebitDashboard/TotalTransactionAmountByBranch?rev=' id='113344089' path='/workbooks/CreditandDebitDashboard' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Dataset (Debit and Credit banking_data)' name='federated.1sgynvl0zr6vr3178yoam0nddpp0' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1sgynvl0zr6vr3178yoam0nddpp0'>
+            <column datatype='integer' name='[Account Number]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Bank Name]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Branch]' role='dimension' type='nominal' />
+            <column caption='No. of Transaction' datatype='integer' name='[Calculation_710442895536775179]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([Account Number])' />
+            </column>
+            <column datatype='string' name='[Customer Name]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Transaction Date]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Transaction Type]' role='dimension' type='nominal' />
+            <column-instance column='[Transaction Date]' derivation='MY' name='[my:Transaction Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Bank Name]' derivation='None' name='[none:Bank Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Branch]' derivation='None' name='[none:Branch:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Transaction Type]' derivation='None' name='[none:Transaction Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_710442895536775179]' derivation='User' name='[usr:Calculation_710442895536775179:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Customer Name,Transaction Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action5_E00D303F9FAF46099C973313F4D2A763]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Customer Name]' />
+              <groupfilter function='level-members' level='[Transaction Type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Transaction Type)]'>
+            <groupfilter function='level-members' level='[Transaction Type]' user:ui-action-filter='[Action7_1F85D1C95E13413DB7618A392F3EFBFC]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[my:Transaction Date:ok]' filter-group='3'>
+            <groupfilter function='level-members' level='[my:Transaction Date:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Branch:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_710442895536775179:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Bank Name:nk]</column>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[my:Transaction Date:ok]</column>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Customer Name,Transaction Type)]</column>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Transaction Type)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_710442895536775179:qk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_710442895536775179:qk]' value='n#,##0,.00K;-#,##0,.00K' />
+            <format attr='font-weight' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_710442895536775179:qk]' value='normal' />
+            <format attr='font-size' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_710442895536775179:qk]' value='11' />
+            <format attr='color' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_710442895536775179:qk]' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Branch:nk]' value='bold' />
+            <format attr='color' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Branch:nk]' value='#f5f5f5' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Transaction Type:nk]' />
+              <text column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_710442895536775179:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[usr:Calculation_710442895536775179:qk]</rows>
+        <cols>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Branch:nk]</cols>
+      </table>
+      <simple-id uuid='{49B05758-61F5-4899-989B-5FF8650A81EC}' />
+    </worksheet>
+    <worksheet name='Transaction Description by Amount'>
+      <repository-location derived-from='https://haproxy-traffic-splitter/workbooks/CreditandDebitDashboard/TransactionDescriptionbyAmount?rev=' id='113374156' path='/workbooks/CreditandDebitDashboard' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Dataset (Debit and Credit banking_data)' name='federated.1sgynvl0zr6vr3178yoam0nddpp0' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1sgynvl0zr6vr3178yoam0nddpp0'>
+            <column datatype='real' name='[Amount]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Bank Name]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Customer Name]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Description]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Transaction Date]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Transaction Type]' role='dimension' type='nominal' />
+            <column-instance column='[Bank Name]' derivation='None' name='[none:Bank Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Description]' derivation='None' name='[none:Description:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Amount]' derivation='Sum' name='[sum:Amount:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Transaction Date]' derivation='Month-Trunc' name='[tmn:Transaction Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Customer Name,Transaction Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action5_E00D303F9FAF46099C973313F4D2A763]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Customer Name]' />
+              <groupfilter function='level-members' level='[Transaction Type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Transaction Type)]'>
+            <groupfilter function='level-members' level='[Transaction Type]' user:ui-action-filter='[Action7_1F85D1C95E13413DB7618A392F3EFBFC]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Bank Name:nk]</column>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Customer Name,Transaction Type)]</column>
+            <column>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[Action (Transaction Type)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[sum:Amount:qk]' value='c&quot;₹ &quot;#,##0,.00K;&quot;₹ &quot;-#,##0,.00K' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='height-header' value='62' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Description:nk]' value='bold' />
+            <format attr='font-size' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Description:nk]' value='14' />
+            <format attr='color' field='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Description:nk]' value='#d4d4d4' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='9' />
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Description:nk]' />
+              <text column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Description:nk]' />
+              <text column='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[sum:Amount:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[sum:Amount:qk]</rows>
+        <cols>[federated.1sgynvl0zr6vr3178yoam0nddpp0].[tmn:Transaction Date:qk]</cols>
+      </table>
+      <simple-id uuid='{84A140E3-9BDE-494F-9C11-79F48984FC1C}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <repository-location derived-from='https://haproxy-traffic-splitter/workbooks/CreditandDebitDashboard/Dashboard1?rev=' id='113383359' path='/workbooks/CreditandDebitDashboard' revision='' />
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#555555' />
+        </style-rule>
+      </style>
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='Dataset (Debit and Credit banking_data)' name='federated.1sgynvl0zr6vr3178yoam0nddpp0' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1sgynvl0zr6vr3178yoam0nddpp0'>
+        <column datatype='string' name='[Bank Name]' role='dimension' type='nominal' />
+        <column datatype='date' name='[Transaction Date]' role='dimension' type='ordinal' />
+        <column-instance column='[Transaction Date]' derivation='MY' name='[my:Transaction Date:ok]' pivot='key' type='ordinal' />
+        <column-instance column='[Bank Name]' derivation='None' name='[none:Bank Name:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='93750' id='3' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone fixed-size='76' h='9896' id='6' is-fixed='true' param='horz' type-v2='layout-flow' w='98828' x='586' y='1042'>
+              <zone fixed-size='877' forceUpdate='true' h='9636' id='11' is-fixed='true' type-v2='text' w='64788' x='659' y='1172'>
+                <formatted-text>
+                  <run bold='true' fontalignment='1' fontcolor='#f5f5f5' fontsize='26'>Debit And Credit Dashboard</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='1' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#000000' />
+                </zone-style>
+              </zone>
+              <zone h='9636' id='73' type-v2='empty' w='33894' x='65447' y='1172'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#000000' />
+                </zone-style>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='solid' />
+                <format attr='border-width' value='1' />
+              </zone-style>
+            </zone>
+            <zone h='83854' id='10' param='horz' type-v2='layout-flow' w='98828' x='586' y='10938'>
+              <zone fixed-size='100' h='83594' id='13' is-fixed='true' param='vert' type-v2='layout-flow' w='7321' x='659' y='11068'>
+                <zone fixed-size='24' h='4167' id='84' is-fixed='true' type-v2='empty' w='7175' x='732' y='11198'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone alt-text='View My Tableau Profile' fixed-size='91' h='12891' id='83' is-fixed='true' is-scaled='1' param='Image/contact-public.png' type-v2='bitmap' url='https://public.tableau.com/app/profile/tanmay.khedekar/vizzes' w='7175' x='732' y='15365'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='44' h='6771' id='88' is-fixed='true' type-v2='empty' w='7175' x='732' y='28256'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='107' h='14974' id='87' is-fixed='true' is-scaled='1' param='Image/contact-linkedin.png' type-v2='bitmap' url='https://www.linkedin.com/in/tanmay-khedekar-data-analyst/' w='7175' x='732' y='35027'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='49' h='7422' id='89' is-fixed='true' type-v2='empty' w='7175' x='732' y='50001'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='12760' id='86' type-v2='dashboard-object' w='7175' x='732' y='57423'>
+                  <button action='' button-click-action-metadata='pdf'>
+                    <export-button-action>tabdoc:abstract-dashboard-button-export-wrapper dashboard-button-export-type=&quot;pdf&quot; dashboarddoc-id=&quot;{B17014C7-E6A0-4D5B-AD3B-ACDDECDC44F3}&quot;</export-button-action>
+                    <button-visual-state>
+                      <image-path>Image/download pdf.png</image-path>
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='5794' id='85' type-v2='empty' w='7175' x='732' y='70183'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='12760' id='90' type-v2='dashboard-object' w='7175' x='732' y='75977'>
+                  <button action='' button-click-action-metadata='image'>
+                    <export-button-action>tabdoc:abstract-dashboard-button-export-wrapper dashboard-button-export-type=&quot;image&quot; dashboarddoc-id=&quot;{B17014C7-E6A0-4D5B-AD3B-ACDDECDC44F3}&quot;</export-button-action>
+                    <button-visual-state>
+                      <image-path>Image/download image.png</image-path>
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='5794' id='91' type-v2='empty' w='7175' x='732' y='88737'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='1' />
+                  <format attr='background-color' value='#000000' />
+                </zone-style>
+              </zone>
+              <zone fixed-size='2' h='83594' id='76' is-fixed='true' type-v2='empty' w='732' x='7980' y='11068'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone fixed-size='1207' h='83594' id='17' is-fixed='true' param='horz' type-v2='layout-flow' w='88360' x='8712' y='11068'>
+                <zone fixed-size='1187' h='83594' id='19' is-fixed='true' param='horz' type-v2='layout-flow' w='88360' x='8712' y='11068'>
+                  <zone h='83594' id='20' param='vert' type-v2='layout-flow' w='88360' x='8712' y='11068'>
+                    <zone fixed-size='146' h='21093' id='23' is-fixed='true' param='vert' type-v2='layout-flow' w='88360' x='8712' y='11068'>
+                      <zone fixed-size='170' h='18749' id='25' is-fixed='true' param='vert' type-v2='layout-flow' w='88214' x='8785' y='12240'>
+                        <zone fixed-size='138' h='17969' id='26' is-fixed='true' param='horz' type-v2='layout-flow' w='88214' x='8785' y='12240'>
+                          <zone fixed-size='251' h='17969' id='28' is-fixed='true' param='vert' type-v2='layout-flow' w='19546' x='8785' y='12240'>
+                            <zone fixed-size='42' forceUpdate='true' h='6511' id='35' is-fixed='true' type-v2='text' w='18374' x='9371' y='12240'>
+                              <formatted-text>
+                                <run bold='true' fontalignment='1' fontcolor='#f5f5f5' fontsize='11'> Total Credited Amount</run>
+                              </formatted-text>
+                              <zone-style>
+                                <format attr='border-color' value='#000000' />
+                                <format attr='border-style' value='none' />
+                                <format attr='border-width' value='0' />
+                                <format attr='margin' value='4' />
+                              </zone-style>
+                            </zone>
+                            <zone fixed-size='66' h='9636' id='34' is-fixed='true' name='Credited Amount' show-title='false' w='18374' x='9371' y='18751'>
+                              <layout-cache fixed-size-w='242' type-h='fixed' type-w='fixed' />
+                              <zone-style>
+                                <format attr='border-color' value='#000000' />
+                                <format attr='border-style' value='none' />
+                                <format attr='border-width' value='0' />
+                                <format attr='margin' value='4' />
+                              </zone-style>
+                            </zone>
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin-right' value='8' />
+                              <format attr='margin-left' value='8' />
+                              <format attr='background-color' value='#000000' />
+                            </zone-style>
+                          </zone>
+                          <zone fixed-size='1' h='17969' id='31' is-fixed='true' type-v2='empty' w='73' x='28331' y='12240'>
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin' value='0' />
+                              <format attr='background-color' value='#f5f5f5' />
+                            </zone-style>
+                          </zone>
+                          <zone fixed-size='287' h='17969' id='30' is-fixed='true' param='vert' type-v2='layout-flow' w='22181' x='28404' y='12240'>
+                            <zone fixed-size='42' forceUpdate='true' h='6511' id='39' is-fixed='true' type-v2='text' w='21009' x='28990' y='12240'>
+                              <formatted-text>
+                                <run bold='true' fontalignment='1' fontcolor='#f5f5f5' fontsize='11'>Total Debited Amount</run>
+                              </formatted-text>
+                              <zone-style>
+                                <format attr='border-color' value='#000000' />
+                                <format attr='border-style' value='none' />
+                                <format attr='border-width' value='0' />
+                                <format attr='margin' value='4' />
+                              </zone-style>
+                            </zone>
+                            <zone fixed-size='76' h='10938' id='38' is-fixed='true' name='Debited Amount' show-title='false' w='21009' x='28990' y='18751'>
+                              <layout-cache fixed-size-w='267' type-h='fixed' type-w='fixed' />
+                              <zone-style>
+                                <format attr='border-color' value='#000000' />
+                                <format attr='border-style' value='none' />
+                                <format attr='border-width' value='0' />
+                                <format attr='margin' value='4' />
+                              </zone-style>
+                            </zone>
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin-right' value='8' />
+                              <format attr='margin-left' value='8' />
+                              <format attr='background-color' value='#000000' />
+                            </zone-style>
+                          </zone>
+                          <zone fixed-size='1' h='17969' id='33' is-fixed='true' type-v2='empty' w='73' x='50585' y='12240'>
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin' value='0' />
+                              <format attr='background-color' value='#f5f5f5' />
+                            </zone-style>
+                          </zone>
+                          <zone h='17969' id='32' param='vert' type-v2='layout-flow' w='25697' x='50658' y='12240'>
+                            <zone fixed-size='40' forceUpdate='true' h='6250' id='41' is-fixed='true' type-v2='text' w='24525' x='51244' y='12240'>
+                              <formatted-text>
+                                <run bold='true' fontalignment='1' fontcolor='#f5f5f5' fontsize='11'>Credit to Debit Ratio</run>
+                              </formatted-text>
+                              <zone-style>
+                                <format attr='border-color' value='#000000' />
+                                <format attr='border-style' value='none' />
+                                <format attr='border-width' value='0' />
+                                <format attr='margin' value='4' />
+                              </zone-style>
+                            </zone>
+                            <zone h='10026' id='40' name='Credit to Debit Ratio' show-title='false' w='24525' x='51244' y='18490'>
+                              <layout-cache fixed-size-h='69' fixed-size-w='313' type-h='fixed' type-w='fixed' />
+                              <zone-style>
+                                <format attr='border-color' value='#000000' />
+                                <format attr='border-style' value='none' />
+                                <format attr='border-width' value='0' />
+                                <format attr='margin' value='4' />
+                              </zone-style>
+                            </zone>
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin-right' value='8' />
+                              <format attr='margin-left' value='8' />
+                              <format attr='background-color' value='#000000' />
+                            </zone-style>
+                          </zone>
+                          <zone fixed-size='1' h='17969' id='42' is-fixed='true' type-v2='empty' w='73' x='76355' y='12240'>
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin' value='0' />
+                              <format attr='background-color' value='#f5f5f5' />
+                            </zone-style>
+                          </zone>
+                          <zone fixed-size='265' h='17969' id='43' is-fixed='true' param='vert' type-v2='layout-flow' w='20571' x='76428' y='12240'>
+                            <zone fixed-size='40' forceUpdate='true' h='6250' id='45' is-fixed='true' type-v2='text' w='19399' x='77014' y='12240'>
+                              <formatted-text>
+                                <run bold='true' fontalignment='1' fontcolor='#f5f5f5' fontsize='11'>Net Transaction Amount</run>
+                              </formatted-text>
+                              <zone-style>
+                                <format attr='border-color' value='#000000' />
+                                <format attr='border-style' value='none' />
+                                <format attr='border-width' value='0' />
+                                <format attr='margin' value='4' />
+                              </zone-style>
+                            </zone>
+                            <zone fixed-size='72' h='10417' id='44' is-fixed='true' name='Net Transaction Amount' show-title='false' w='19399' x='77014' y='18490'>
+                              <layout-cache fixed-size-w='255' type-h='fixed' type-w='fixed' />
+                              <zone-style>
+                                <format attr='border-color' value='#000000' />
+                                <format attr='border-style' value='none' />
+                                <format attr='border-width' value='0' />
+                                <format attr='margin' value='4' />
+                              </zone-style>
+                            </zone>
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin-right' value='8' />
+                              <format attr='margin-left' value='8' />
+                              <format attr='background-color' value='#000000' />
+                            </zone-style>
+                          </zone>
+                        </zone>
+                      </zone>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='solid' />
+                        <format attr='border-width' value='1' />
+                        <format attr='margin-top' value='8' />
+                        <format attr='margin-bottom' value='8' />
+                      </zone-style>
+                    </zone>
+                    <zone fixed-size='1' h='130' id='71' is-fixed='true' type-v2='empty' w='88360' x='8712' y='32161'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='0' />
+                        <format attr='background-color' value='#f5f5f5' />
+                      </zone-style>
+                    </zone>
+                    <zone h='62371' id='46' param='vert' type-v2='layout-flow' w='88360' x='8712' y='32291'>
+                      <zone h='62371' id='48' param='horz' type-v2='layout-flow' w='88360' x='8712' y='32291'>
+                        <zone fixed-size='468' h='61329' id='50' is-fixed='true' param='horz' type-v2='layout-flow' w='34261' x='8712' y='33333'>
+                          <zone fixed-size='478' h='61329' id='52' is-fixed='true' param='vert' type-v2='layout-flow' w='34261' x='8712' y='33333'>
+                            <zone forceUpdate='true' h='3255' id='56' type-v2='text' w='33089' x='9298' y='34375'>
+                              <formatted-text>
+                                <run bold='true' fontalignment='1' fontcolor='#f5f5f5' fontsize='11'> Total Transactions by Branch</run>
+                                <run fontalignment='1'>Æ&#10;</run>
+                              </formatted-text>
+                              <zone-style>
+                                <format attr='border-color' value='#000000' />
+                                <format attr='border-style' value='none' />
+                                <format attr='border-width' value='0' />
+                                <format attr='margin' value='4' />
+                                <format attr='margin-top' value='0' />
+                                <format attr='margin-right' value='5' />
+                                <format attr='margin-bottom' value='0' />
+                                <format attr='margin-left' value='5' />
+                                <format attr='background-color' value='#000000' />
+                              </zone-style>
+                            </zone>
+                            <zone fixed-size='182' h='24740' id='53' is-fixed='true' name='Total Transaction Amount By Branch' show-title='false' w='33089' x='9298' y='37630'>
+                              <layout-cache cell-count-w='6' minheight='140' type-h='scalable' type-w='cell' />
+                              <zone-style>
+                                <format attr='border-color' value='#000000' />
+                                <format attr='border-style' value='none' />
+                                <format attr='border-width' value='0' />
+                                <format attr='margin' value='4' />
+                              </zone-style>
+                            </zone>
+                            <zone fixed-size='1' h='130' id='74' is-fixed='true' type-v2='empty' w='33089' x='9298' y='62370'>
+                              <zone-style>
+                                <format attr='border-color' value='#000000' />
+                                <format attr='border-style' value='none' />
+                                <format attr='border-width' value='0' />
+                                <format attr='margin' value='0' />
+                                <format attr='background-color' value='#f5f5f5' />
+                              </zone-style>
+                            </zone>
+                            <zone fixed-size='21' forceUpdate='true' h='3776' id='55' is-fixed='true' type-v2='text' w='33089' x='9298' y='62500'>
+                              <formatted-text>
+                                <run bold='true' fontalignment='1' fontcolor='#f5f5f5' fontsize='11'> Transaction Purpose by Type</run>
+                              </formatted-text>
+                              <zone-style>
+                                <format attr='border-color' value='#000000' />
+                                <format attr='border-style' value='none' />
+                                <format attr='border-width' value='0' />
+                                <format attr='margin' value='0' />
+                                <format attr='margin-top' value='4' />
+                                <format attr='margin-bottom' value='4' />
+                              </zone-style>
+                            </zone>
+                            <zone h='28386' id='72' name='Transaction Description by Amount' show-title='false' w='33089' x='9298' y='66276'>
+                              <layout-cache minheight='163' minwidth='164' type-h='scalable' type-w='scalable' />
+                              <zone-style>
+                                <format attr='border-color' value='#000000' />
+                                <format attr='border-style' value='none' />
+                                <format attr='border-width' value='0' />
+                                <format attr='margin' value='4' />
+                              </zone-style>
+                            </zone>
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin' value='5' />
+                              <format attr='margin-top' value='8' />
+                              <format attr='margin-right' value='8' />
+                              <format attr='margin-bottom' value='0' />
+                              <format attr='margin-left' value='8' />
+                            </zone-style>
+                          </zone>
+                          <zone-style>
+                            <format attr='border-color' value='#000000' />
+                            <format attr='border-style' value='none' />
+                            <format attr='border-width' value='0' />
+                            <format attr='background-color' value='#000000' />
+                          </zone-style>
+                        </zone>
+                        <zone fixed-size='1' h='61329' id='59' is-fixed='true' type-v2='empty' w='73' x='42973' y='33333'>
+                          <zone-style>
+                            <format attr='border-color' value='#000000' />
+                            <format attr='border-style' value='none' />
+                            <format attr='border-width' value='0' />
+                            <format attr='margin' value='0' />
+                            <format attr='background-color' value='#f5f5f5' />
+                          </zone-style>
+                        </zone>
+                        <zone fixed-size='216' h='61329' id='60' is-fixed='true' param='vert' type-v2='layout-flow' w='16545' x='43046' y='33333'>
+                          <zone fixed-size='174' h='25260' id='63' is-fixed='true' is-scaled='1' param='Image/Cerdit-Card-Processing.jpg' type-v2='bitmap' w='15813' x='43412' y='33333'>
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin' value='4' />
+                              <format attr='margin-top' value='10' />
+                              <format attr='margin-right' value='8' />
+                              <format attr='margin-bottom' value='10' />
+                              <format attr='margin-left' value='8' />
+                              <format attr='background-color' value='#000000' />
+                            </zone-style>
+                          </zone>
+                          <zone fixed-size='1' h='130' id='79' is-fixed='true' type-v2='empty' w='15813' x='43412' y='58593'>
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin' value='0' />
+                              <format attr='background-color' value='#f5f5f5' />
+                            </zone-style>
+                          </zone>
+                          <zone forceUpdate='true' h='7292' id='64' type-v2='text' w='15813' x='43412' y='58723'>
+                            <formatted-text>
+                              <run bold='true' fontalignment='1' fontcolor='#f5f5f5' fontsize='10'> Total Transactions by Type</run>
+                            </formatted-text>
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin' value='4' />
+                              <format attr='background-color' value='#000000' />
+                            </zone-style>
+                          </zone>
+                          <zone h='28647' id='61' name='Debit and credit Transactions' show-title='false' w='15813' x='43412' y='66015'>
+                            <layout-cache cell-count-h='1' minwidth='101' type-h='cell' type-w='scalable' />
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin' value='4' />
+                            </zone-style>
+                          </zone>
+                          <zone-style>
+                            <format attr='border-color' value='#000000' />
+                            <format attr='border-style' value='none' />
+                            <format attr='border-width' value='0' />
+                            <format attr='margin-right' value='5' />
+                            <format attr='margin-left' value='5' />
+                          </zone-style>
+                        </zone>
+                        <zone fixed-size='1' h='61329' id='51' is-fixed='true' type-v2='empty' w='73' x='59591' y='33333'>
+                          <zone-style>
+                            <format attr='border-color' value='#000000' />
+                            <format attr='border-style' value='none' />
+                            <format attr='border-width' value='0' />
+                            <format attr='margin' value='0' />
+                            <format attr='background-color' value='#f5f5f5' />
+                          </zone-style>
+                        </zone>
+                        <zone h='61329' id='65' param='vert' type-v2='layout-flow' w='37408' x='59664' y='33333'>
+                          <zone forceUpdate='true' h='3776' id='69' type-v2='text' w='36236' x='60250' y='33333'>
+                            <formatted-text>
+                              <run bold='true' fontalignment='1' fontcolor='#f5f5f5'> Top 5 Customers by Total Amount spend by Transaction Type</run>
+                            </formatted-text>
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin' value='4' />
+                            </zone-style>
+                          </zone>
+                          <zone fixed-size='166' h='22657' id='54' is-fixed='true' name='Top 5 Customers by Transaction type' show-title='false' w='36236' x='60250' y='37109'>
+                            <layout-cache fixed-size-w='479' type-h='fixed' type-w='fixed' />
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin' value='4' />
+                            </zone-style>
+                          </zone>
+                          <zone fixed-size='1' h='130' id='75' is-fixed='true' type-v2='empty' w='36236' x='60250' y='59766'>
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin' value='0' />
+                              <format attr='background-color' value='#f5f5f5' />
+                            </zone-style>
+                          </zone>
+                          <zone forceUpdate='true' h='4297' id='70' type-v2='text' w='36236' x='60250' y='59896'>
+                            <formatted-text>
+                              <run bold='true' fontalignment='1' fontcolor='#f5f5f5' fontsize='11'> Monthly Trend of Transaction in Year 2024</run>
+                            </formatted-text>
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin' value='0' />
+                              <format attr='margin-top' value='4' />
+                              <format attr='margin-bottom' value='4' />
+                            </zone-style>
+                          </zone>
+                          <zone h='30469' id='67' name='Montly Credit and Debit Transactions' show-title='false' w='36236' x='60250' y='64193'>
+                            <layout-cache minheight='163' minwidth='100' type-h='scalable' type-w='scalable' />
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin' value='4' />
+                            </zone-style>
+                          </zone>
+                          <zone-style>
+                            <format attr='border-color' value='#000000' />
+                            <format attr='border-style' value='none' />
+                            <format attr='border-width' value='0' />
+                            <format attr='margin-right' value='8' />
+                            <format attr='margin-left' value='8' />
+                            <format attr='background-color' value='#000000' />
+                          </zone-style>
+                        </zone>
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='0' />
+                          <format attr='margin-top' value='8' />
+                          <format attr='margin-bottom' value='0' />
+                        </zone-style>
+                      </zone>
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='solid' />
+                <format attr='border-width' value='1' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone h='4166' id='78' type-v2='empty' w='98828' x='586' y='94792'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='7552' id='80' is-scaled='1' param='Image/360_F_61062796_NF87GPnWV0fQ2LhoYNlyjev0PocRwZj9.jpg' type-v2='bitmap' w='6881' x='1611' y='2344' />
+        <zone h='7552' hidden-by-user='true' id='92' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='22694' x='67130' y='2214'>
+          <zone h='7552' hidden-by-user='true' id='93' mode='dropdown' name='Net Transaction Amount' param='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Bank Name:nk]' type-v2='filter' values='database' w='11347' x='67130' y='2214'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='7552' hidden-by-user='true' id='94' mode='dropdown' name='Net Transaction Amount' param='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[my:Transaction Date:ok]' type-v2='filter' values='database' w='11347' x='78477' y='2214'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#000000' />
+          </zone-style>
+        </zone>
+        <zone h='3646' id='95' type-v2='dashboard-object' w='3514' x='94290' y='5339'>
+          <button action='' active-visual-state-index='1'>
+            <toggle-action>tabdoc:toggle-button-click-action window-id=&quot;{4BD9B794-79D2-44EB-B575-3F9FBA9ECA0C}&quot; zone-id=&quot;95&quot; zone-ids=[92]</toggle-action>
+            <button-visual-state>
+              <image-path>Image/filter-active.png</image-path>
+            </button-visual-state>
+            <button-visual-state>
+              <image-path>Image/filter-inactive.png</image-path>
+            </button-visual-state>
+          </button>
+        </zone>
+        <zone h='3255' id='96' type-v2='text' w='4758' x='94070' y='1823'>
+          <formatted-text>
+            <run bold='true' fontcolor='#f5f5f5' fontsize='11'>Filter</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='2995' id='97' type-v2='text' w='10542' x='55124' y='6641'>
+          <formatted-text>
+            <run bold='true' fontcolor='#c52a87' fontname='Roboto' fontsize='8'> ⬤</run>
+            <run bold='true' fontcolor='#6ab9ff' fontname='Roboto' fontsize='8'>Æ </run>
+            <run bold='true' fontcolor='#f5f5f5' fontname='Roboto' fontsize='8'>Debit </run>
+            <run bold='true' fontcolor='#03c4a1' fontname='Roboto' fontsize='8'>⬤</run>
+            <run bold='true' fontcolor='#6ab9ff' fontname='Roboto' fontsize='8'>Æ </run>
+            <run bold='true' fontcolor='#f5f5f5' fontname='Roboto' fontsize='8'>Credit</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='2900' minheight='2900' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='111' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='110' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+                <zone fixed-size='877' forceUpdate='true' h='9636' id='11' type-v2='text' w='64788' x='659' y='1172'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#f5f5f5' fontsize='26'>Debit And Credit Dashboard</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#000000' />
+                  </zone-style>
+                </zone>
+                <zone h='3255' id='96' type-v2='text' w='4758' x='94070' y='1823'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#f5f5f5' fontsize='11'>Filter</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='58' h='7552' id='80' is-fixed='true' is-scaled='1' param='Image/360_F_61062796_NF87GPnWV0fQ2LhoYNlyjev0PocRwZj9.jpg' type-v2='bitmap' w='6881' x='1611' y='2344'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='2995' id='97' type-v2='text' w='10542' x='55124' y='6641'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#c52a87' fontname='Roboto' fontsize='8'> ⬤</run>
+                    <run bold='true' fontcolor='#6ab9ff' fontname='Roboto' fontsize='8'>Æ </run>
+                    <run bold='true' fontcolor='#f5f5f5' fontname='Roboto' fontsize='8'>Debit </run>
+                    <run bold='true' fontcolor='#03c4a1' fontname='Roboto' fontsize='8'>⬤</run>
+                    <run bold='true' fontcolor='#6ab9ff' fontname='Roboto' fontsize='8'>Æ </run>
+                    <run bold='true' fontcolor='#f5f5f5' fontname='Roboto' fontsize='8'>Credit</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='42' forceUpdate='true' h='6511' id='35' type-v2='text' w='18374' x='9371' y='12240'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#f5f5f5' fontsize='11'> Total Credited Amount</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='42' forceUpdate='true' h='6511' id='39' type-v2='text' w='21009' x='28990' y='12240'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#f5f5f5' fontsize='11'>Total Debited Amount</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='40' forceUpdate='true' h='6250' id='41' type-v2='text' w='24525' x='51244' y='12240'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#f5f5f5' fontsize='11'>Credit to Debit Ratio</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='40' forceUpdate='true' h='6250' id='45' type-v2='text' w='19399' x='77014' y='12240'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#f5f5f5' fontsize='11'>Net Transaction Amount</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone alt-text='View My Tableau Profile' fixed-size='91' h='12891' id='83' is-fixed='true' is-scaled='1' param='Image/contact-public.png' type-v2='bitmap' url='https://public.tableau.com/app/profile/tanmay.khedekar/vizzes' w='7175' x='732' y='15365'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='69' h='10026' id='40' is-fixed='true' name='Credit to Debit Ratio' show-title='false' w='24525' x='51244' y='18490'>
+                  <layout-cache fixed-size-h='69' fixed-size-w='313' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7552' id='93' mode='dropdown' name='Net Transaction Amount' param='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[none:Bank Name:nk]' type-v2='filter' values='database' w='11347' x='67130' y='2214'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7552' id='94' mode='dropdown' name='Net Transaction Amount' param='[federated.1sgynvl0zr6vr3178yoam0nddpp0].[my:Transaction Date:ok]' type-v2='filter' values='database' w='11347' x='78477' y='2214'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='72' h='10417' id='44' is-fixed='true' name='Net Transaction Amount' show-title='false' w='19399' x='77014' y='18490'>
+                  <layout-cache fixed-size-w='255' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='66' h='9636' id='34' is-fixed='true' name='Credited Amount' show-title='false' w='18374' x='9371' y='18751'>
+                  <layout-cache fixed-size-w='242' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='76' h='10938' id='38' is-fixed='true' name='Debited Amount' show-title='false' w='21009' x='28990' y='18751'>
+                  <layout-cache fixed-size-w='267' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='174' h='25260' id='63' is-fixed='true' is-scaled='1' param='Image/Cerdit-Card-Processing.jpg' type-v2='bitmap' w='15813' x='43412' y='33333'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#000000' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='3776' id='69' type-v2='text' w='36236' x='60250' y='33333'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#f5f5f5'> Top 5 Customers by Total Amount spend by Transaction Type</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='3255' id='56' type-v2='text' w='33089' x='9298' y='34375'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#f5f5f5' fontsize='11'> Total Transactions by Branch</run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#000000' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='107' h='14974' id='87' is-fixed='true' is-scaled='1' param='Image/contact-linkedin.png' type-v2='bitmap' url='https://www.linkedin.com/in/tanmay-khedekar-data-analyst/' w='7175' x='732' y='35027'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='166' h='22657' id='54' is-fixed='true' name='Top 5 Customers by Transaction type' show-title='false' w='36236' x='60250' y='37109'>
+                  <layout-cache fixed-size-w='479' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='182' h='24740' id='53' is-fixed='true' name='Total Transaction Amount By Branch' show-title='false' w='33089' x='9298' y='37630'>
+                  <layout-cache cell-count-w='6' minheight='140' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='12760' id='86' type-v2='dashboard-object' w='7175' x='732' y='57423'>
+                  <button action='' button-click-action-metadata='pdf'>
+                    <export-button-action>tabdoc:abstract-dashboard-button-export-wrapper dashboard-button-export-type=&quot;pdf&quot; dashboarddoc-id=&quot;{B17014C7-E6A0-4D5B-AD3B-ACDDECDC44F3}&quot;</export-button-action>
+                    <button-visual-state>
+                      <image-path>Image/download pdf.png</image-path>
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='7292' id='64' type-v2='text' w='15813' x='43412' y='58723'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#f5f5f5' fontsize='10'> Total Transactions by Type</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#000000' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='4297' id='70' type-v2='text' w='36236' x='60250' y='59896'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#f5f5f5' fontsize='11'> Monthly Trend of Transaction in Year 2024</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='21' forceUpdate='true' h='3776' id='55' type-v2='text' w='33089' x='9298' y='62500'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#f5f5f5' fontsize='11'> Transaction Purpose by Type</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='226' h='30469' id='67' is-fixed='true' name='Montly Credit and Debit Transactions' show-title='false' w='36236' x='60250' y='64193'>
+                  <layout-cache minheight='163' minwidth='100' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='212' h='28647' id='61' is-fixed='true' name='Debit and credit Transactions' show-title='false' w='15813' x='43412' y='66015'>
+                  <layout-cache cell-count-h='1' minwidth='101' type-h='cell' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='210' h='28386' id='72' is-fixed='true' name='Transaction Description by Amount' show-title='false' w='33089' x='9298' y='66276'>
+                  <layout-cache minheight='163' minwidth='164' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='12760' id='90' type-v2='dashboard-object' w='7175' x='732' y='75977'>
+                  <button action='' button-click-action-metadata='image'>
+                    <export-button-action>tabdoc:abstract-dashboard-button-export-wrapper dashboard-button-export-type=&quot;image&quot; dashboarddoc-id=&quot;{B17014C7-E6A0-4D5B-AD3B-ACDDECDC44F3}&quot;</export-button-action>
+                    <button-visual-state>
+                      <image-path>Image/download image.png</image-path>
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{B17014C7-E6A0-4D5B-AD3B-ACDDECDC44F3}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='37'>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Credit to Debit Ratio' />
+        <viewpoint name='Credited Amount' />
+        <viewpoint name='Debit and credit Transactions'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Debited Amount' />
+        <viewpoint name='Montly Credit and Debit Transactions'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Net Transaction Amount' />
+        <viewpoint name='Top 5 Customers by Transaction type' />
+        <viewpoint name='Total Transaction Amount By Branch'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Transaction Description by Amount'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='95' />
+      <simple-id uuid='{4BD9B794-79D2-44EB-B575-3F9FBA9ECA0C}' />
+    </window>
+    <window class='worksheet' name='Credited Amount'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{036BC7DD-95F4-4331-B555-08AB3C5C9DB7}' />
+    </window>
+    <window class='worksheet' name='Debited Amount'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8B7C25E9-4190-4A5A-BE79-C5B8C8D86404}' />
+    </window>
+    <window class='worksheet' name='Credit to Debit Ratio'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F4AE2DCE-99D3-4367-AAAF-0A813221043A}' />
+    </window>
+    <window class='worksheet' name='Net Transaction Amount'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2B7B4C53-ADED-4572-A600-11FD46DF1D12}' />
+    </window>
+    <window class='worksheet' name='Total Transaction Amount By Branch'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{42A2A1E5-A090-41CA-A6C8-BA1EF9352599}' />
+    </window>
+    <window class='worksheet' name='Top 5 Customers by Transaction type'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{65C51B6E-74E8-4400-ACC0-AD7EB28D46A3}' />
+    </window>
+    <window class='worksheet' name='Montly Credit and Debit Transactions'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{62C6E27A-65BD-43EA-BD51-8CEA44F9A5E5}' />
+    </window>
+    <window class='worksheet' name='Transaction Description by Amount'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{FAAFEA76-8FF1-422F-BCBF-DD1B8080231E}' />
+    </window>
+    <window class='worksheet' name='Debit and credit Transactions'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{471EE59E-39B9-42A4-B1BF-27C54856874C}' />
+    </window>
+  </windows>
+</workbook>
